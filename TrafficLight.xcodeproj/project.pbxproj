@@ -11,6 +11,9 @@
 		AD9178FB28CA198400955500 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD9178FA28CA198400955500 /* ContentView.swift */; };
 		AD9178FD28CA198500955500 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AD9178FC28CA198500955500 /* Assets.xcassets */; };
 		AD91790028CA198500955500 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AD9178FF28CA198500955500 /* Preview Assets.xcassets */; };
+		AD91790728CA1BA800955500 /* ColorCircleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD91790628CA1BA800955500 /* ColorCircleView.swift */; };
+		AD91790928CA1FB800955500 /* TrafficLightView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD91790828CA1FB800955500 /* TrafficLightView.swift */; };
+		AD91790D28CA48ED00955500 /* ButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD91790C28CA48ED00955500 /* ButtonView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +22,9 @@
 		AD9178FA28CA198400955500 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		AD9178FC28CA198500955500 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		AD9178FF28CA198500955500 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		AD91790628CA1BA800955500 /* ColorCircleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorCircleView.swift; sourceTree = "<group>"; };
+		AD91790828CA1FB800955500 /* TrafficLightView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrafficLightView.swift; sourceTree = "<group>"; };
+		AD91790C28CA48ED00955500 /* ButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -53,6 +59,9 @@
 			children = (
 				AD9178F828CA198400955500 /* TrafficLightApp.swift */,
 				AD9178FA28CA198400955500 /* ContentView.swift */,
+				AD91790C28CA48ED00955500 /* ButtonView.swift */,
+				AD91790628CA1BA800955500 /* ColorCircleView.swift */,
+				AD91790828CA1FB800955500 /* TrafficLightView.swift */,
 				AD9178FC28CA198500955500 /* Assets.xcassets */,
 				AD9178FE28CA198500955500 /* Preview Content */,
 			);
@@ -137,8 +146,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AD91790728CA1BA800955500 /* ColorCircleView.swift in Sources */,
 				AD9178FB28CA198400955500 /* ContentView.swift in Sources */,
+				AD91790D28CA48ED00955500 /* ButtonView.swift in Sources */,
 				AD9178F928CA198400955500 /* TrafficLightApp.swift in Sources */,
+				AD91790928CA1FB800955500 /* TrafficLightView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
