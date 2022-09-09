@@ -8,8 +8,8 @@
 import SwiftUI
 
 struct ContentView: View {
-    @State var light = Light.start
-    @State var title = "START"
+    @State private var light = Light.start
+    @State private var title = "START"
     
     var body: some View {
         ZStack {
@@ -17,8 +17,10 @@ struct ContentView: View {
                 .ignoresSafeArea()
             VStack {
                 TrafficLightView(light: light)
+                    .aspectRatio(0.8, contentMode: .fit)
                 Spacer()
                 ButtonView(title: title, action: buttonPressed)
+                    .padding(EdgeInsets(top: 0, leading: 70, bottom: 10, trailing: 70))
             }
             .padding()
         }
@@ -30,20 +32,16 @@ struct ContentView: View {
         }
         
         switch light {
-        case .red:
-            light = .yellow
-        case .yellow:
-            light = .green
-        case .green:
-            light = .red
-        case .start:
-            light = .red
+        case .red: light = .yellow
+        case .yellow: light = .green
+        case .green: light = .red
+        case .start: light = .red
         }
     }
 }
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
-        ContentView(light: .start, title: "START")
+        ContentView()
     }
 }

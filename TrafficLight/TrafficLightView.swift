@@ -7,32 +7,36 @@
 
 import SwiftUI
 
+enum Light {
+    case red, yellow, green, start
+}
+
 struct TrafficLightView: View {
     let light: Light
-    private let opacity = 0.4
+    private let on = 1.0
+    private let off = 0.4
     
     var body: some View {
         VStack(spacing: 15) {
             switch light {
             case .red:
-                ColorCircleView(color: .red)
-                ColorCircleView(color: .yellow).opacity(opacity)
-                ColorCircleView(color: .green).opacity(opacity)
+                ColorCircleView(color: .red, opacity: on)
+                ColorCircleView(color: .yellow, opacity: off)
+                ColorCircleView(color: .green, opacity: off)
             case .yellow:
-                ColorCircleView(color: .red).opacity(opacity)
-                ColorCircleView(color: .yellow)
-                ColorCircleView(color: .green).opacity(opacity)
+                ColorCircleView(color: .red, opacity: off)
+                ColorCircleView(color: .yellow, opacity: on)
+                ColorCircleView(color: .green, opacity: off)
             case .green:
-                ColorCircleView(color: .red).opacity(opacity)
-                ColorCircleView(color: .yellow).opacity(opacity)
-                ColorCircleView(color: .green)
+                ColorCircleView(color: .red, opacity: off)
+                ColorCircleView(color: .yellow, opacity: off)
+                ColorCircleView(color: .green, opacity: on)
             case .start:
-                ColorCircleView(color: .red)
-                ColorCircleView(color: .yellow)
-                ColorCircleView(color: .green)
+                ColorCircleView(color: .red, opacity: on)
+                ColorCircleView(color: .yellow, opacity: on)
+                ColorCircleView(color: .green, opacity: on)
             }
         }
-        .aspectRatio(0.85, contentMode: .fit)
     }
 }
 
@@ -40,11 +44,4 @@ struct TrafficLightView_Previews: PreviewProvider {
     static var previews: some View {
         TrafficLightView(light: .start)
     }
-}
-
-enum Light {
-    case red
-    case yellow
-    case green
-    case start
 }

@@ -8,14 +8,15 @@
 import SwiftUI
 
 struct ButtonView: View {
-    var title: String
-    var action: () -> Void
+    let title: String
+    let action: () -> Void
     
     var body: some View {
         Button(action: action) {
             Text(title)
                 .font(.title)
-                .padding(EdgeInsets(top: 10, leading: 50, bottom: 10, trailing: 50))
+                .padding()
+                .frame(minWidth: .zero,  maxWidth: .infinity)
                 .background(.black)
                 .foregroundColor(.yellow)
                 .cornerRadius(10)
@@ -27,6 +28,6 @@ struct ButtonView: View {
 
 struct ButtonView_Previews: PreviewProvider {
     static var previews: some View {
-        ButtonView(title: "START", action: {} )
+        ButtonView(title: "START", action: {})
     }
 }
