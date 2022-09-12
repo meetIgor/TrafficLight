@@ -7,6 +7,10 @@
 
 import SwiftUI
 
+enum Light {
+    case red, yellow, green, start
+}
+
 struct ContentView: View {
     @State private var light = Light.start
     @State private var title = "START"
