@@ -11,14 +11,32 @@ struct ContentView: View {
     @State private var light = Light.start
     @State private var title = "START"
     
+    private let on = 1.0
+    private let off = 0.3
+    
     var body: some View {
         ZStack {
             Color(.black)
                 .ignoresSafeArea()
             VStack {
-                TrafficLightView(light: light)
-                    .aspectRatio(0.8, contentMode: .fit)
+                VStack(spacing: 15) {
+                    ColorCircleView(
+                        color: .red,
+                        opacity: light == .red ? on : off
+                    )
+                    ColorCircleView(
+                        color: .yellow,
+                        opacity: light == .yellow ? on : off
+                    )
+                    ColorCircleView(
+                        color: .green,
+                        opacity: light == .green ? on : off
+                    )
+                }
+                .aspectRatio(0.8, contentMode: .fit)
+                
                 Spacer()
+                
                 ButtonView(title: title, action: buttonPressed)
                     .padding(EdgeInsets(top: 0, leading: 70, bottom: 10, trailing: 70))
             }

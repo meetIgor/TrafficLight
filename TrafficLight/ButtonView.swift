@@ -14,15 +14,14 @@ struct ButtonView: View {
     var body: some View {
         Button(action: action) {
             Text(title)
-                .font(.title)
-                .padding()
-                .frame(minWidth: .zero,  maxWidth: .infinity)
-                .background(.black)
+                .font(.title.weight(.bold))
                 .foregroundColor(.yellow)
-                .cornerRadius(10)
-                .overlay(RoundedRectangle(cornerRadius: 10).stroke(Color.gray, lineWidth: 2))
-                .shadow(color: .yellow, radius: 5)
         }
+        .frame(minWidth: .zero,  maxWidth: .infinity, minHeight: 60)
+        .background(.black)
+        .cornerRadius(10)
+        .overlay(RoundedRectangle(cornerRadius: 10).stroke(Color.gray, lineWidth: 2))
+        .shadow(color: .yellow, radius: 5)
     }
 }
 
